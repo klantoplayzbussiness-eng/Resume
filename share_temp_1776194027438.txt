@@ -1,941 +1,235 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KlantoPlayz | Professional Video Editor</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --sky-primary: #0EA5E9;
-            --sky-dark: #0284C7;
-            --sky-light: #E0F2FE;
-            --sky-gradient: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 50%, #7DD3FC 100%);
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8FAFC;
-            overflow-x: hidden;
-        }
-        
-        .font-display {
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .sky-gradient-text {
-            background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .sky-gradient-bg {
-            background: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 50%, #7DD3FC 100%);
-        }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.3);
-        }
-        
-        .video-overlay {
-            background: linear-gradient(to top, rgba(2, 132, 199, 0.9) 0%, transparent 100%);
-        }
-        
-        .play-button {
-            transition: all 0.3s ease;
-        }
-        
-        .play-button:hover {
-            transform: scale(1.1);
-            background: rgba(255, 255, 255, 0.95);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background: var(--sky-primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .skill-bar {
-            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .grain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
-        
-        .custom-cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #0EA5E9;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.2s ease, background 0.2s ease;
-            mix-blend-mode: difference;
-        }
-        
-        .custom-cursor.hover {
-            transform: scale(2);
-            background: rgba(14, 165, 233, 0.3);
-        }
-        
-        .timeline-line {
-            background: linear-gradient(to bottom, #0EA5E9, #38BDF8);
-        }
-        
-        .reveal-text {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-        
-        .project-card:hover .project-info {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .project-info {
-            transform: translateY(20px);
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-    </style>
-</head>
-<body class="text-slate-800 antialiased selection:bg-sky-200 selection:text-sky-900">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ACCA FA2 – Maintaining Financial Records</title>
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f1e1;--bar:#ebe7d3;--line:#bdb8a3;--red:#d8301f;--org:#b86a12;--gold:#e0a21d;--ink:#111}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.hd{display:flex;align-items:stretch;background:var(--bar);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{background:var(--red);color:#fff;font-weight:700;font-size:20px;width:64px;display:flex;align-items:center;justify-content:center;margin:6px 10px}
+.cell{padding:8px 12px;font-size:13px;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;text-align:center}
+.cell b{font-weight:400}
+.prog{min-width:150px}
+.bar{background:#333;color:#fff;font-size:12px;font-weight:700;position:relative;height:18px;line-height:18px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--gold);z-index:0}
+.bar span{position:relative;z-index:1}
+.org{color:var(--org);font-weight:700}
+.exit{margin-left:auto;font-size:11px;border-left:1px solid var(--line);padding:8px 14px;text-align:center;cursor:pointer}
+.exit u{display:block;width:34px;height:34px;border-radius:50%;background:#111;color:var(--gold);line-height:34px;margin:0 auto 2px;text-decoration:none;font-weight:700}
+main{max-width:980px;margin:0 auto;padding:26px 16px 40px}
+.q{font-weight:700;font-size:16px;margin:0 0 14px;line-height:1.4}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:9px 6px;border-bottom:1px solid var(--line);cursor:pointer;font-size:16px;line-height:1.4}
+.opt:first-of-type{border-top:0}
+.opt .r{flex:none;width:16px;height:16px;border:1px solid #444;border-radius:50%;margin-top:3px;background:#fff}
+.opt.ok{background:#b7e4b0}.opt.ok .r{background:#2e9b2e;border-color:#1b6b1b;box-shadow:inset 0 0 0 3px #fff}
+.opt.bad{background:#f4b9b2}.opt.bad .r{background:#c0291b;box-shadow:inset 0 0 0 3px #fff}
+.done .opt{cursor:default}
+.nav{display:flex;gap:10px;margin-top:22px}
+button{font:inherit;font-size:14px;padding:9px 20px;border:1px solid #777;background:#fff;border-radius:3px;cursor:pointer}
+button.p{background:var(--org);color:#fff;border-color:var(--org);font-weight:700}
+button:disabled{opacity:.4;cursor:default}
+.home{text-align:center;padding-top:30px}
+.home h1{font-size:22px;margin:10px 0 4px}
+.home p{margin:0 0 22px;color:#444;font-size:14px}
+.pp{display:block;width:100%;max-width:460px;margin:0 auto 10px;text-align:left;padding:14px 16px;background:#fff;border:2px solid var(--line);font-size:16px}
+.pp.sel{border-color:var(--org);background:#fbefd9}
+.pp small{display:block;color:#555;font-size:12px;margin-top:3px}
+.res{font-size:18px;text-align:center;padding-top:30px}
 
-    <!-- Grain Overlay -->
-    <div class="grain"></div>
-    
-    <!-- Custom Cursor -->
-    <div class="custom-cursor hidden md:block" id="cursor"></div>
+.opt.on{background:#e6e0c4}.r.on{background:#555!important;box-shadow:inset 0 0 0 3px #fff}.r.sq{border-radius:2px}.tb{border-collapse:collapse;width:100%;font-size:15px}.tb th{padding:8px;border-bottom:1px solid var(--line)}.tb td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:center}.tb td:first-child{text-align:left}.tb td.ok{background:#b7e4b0}.tb td.bad{background:#f4b9b2}.tb .r{display:inline-block}
+.r{flex:none;width:16px;height:16px;border:1px solid #444;border-radius:50%;background:#fff;display:inline-block;vertical-align:middle}
+.r.sq{border-radius:2px}
+.opt .r{margin-top:3px}
+.opt.ok{box-shadow:0 0 0 2px #2e9b2e,0 0 14px 3px rgba(46,155,46,.65)}
+.opt.bad{box-shadow:0 0 0 2px #c0291b,0 0 14px 3px rgba(192,41,27,.55)}
+.opt.on .r{background:#555;box-shadow:inset 0 0 0 3px #fff}
+.opt.sq-on .r{background:#555;box-shadow:inset 0 0 0 3px #fff}
+.tb td.ok{box-shadow:inset 0 0 0 2px #2e9b2e,0 0 12px 2px rgba(46,155,46,.65)}
+.tb td.bad{box-shadow:inset 0 0 0 2px #c0291b,0 0 12px 2px rgba(192,41,27,.55)}
+.tb td{cursor:pointer}
+.tb td.ok .r.on{background:#2e9b2e!important}.tb td.bad .r.on{background:#c0291b!important}
+.nv{font-size:16px;padding:6px 8px;width:170px;border:2px solid #777;background:#fff;border-radius:3px;outline:0}
+.nv.good{border-color:#2e9b2e;background:#b7e4b0;box-shadow:0 0 0 3px rgba(46,155,46,.35),0 0 16px 4px rgba(46,155,46,.7)}
+.nv.badv{border-color:#c0291b;background:#f4b9b2;box-shadow:0 0 0 3px rgba(192,41,27,.3),0 0 14px 3px rgba(192,41,27,.5)}
+.hint{color:#1b6b1b;font-weight:700;margin-top:10px}
+.sub{font-size:13px;color:#555;margin:-6px 0 12px}
+button.s{background:#fff;color:#444}
+</style></head><body>
+<div id="app"></div>
+<script>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-40 top-0 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="text-2xl font-bold tracking-tighter text-slate-900">
-                        Klanto<span class="text-sky-500">Playz</span>
-                    </span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-slate-700 hover:text-sky-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="#work" class="nav-link text-slate-700 hover:text-sky-600 px-3 py-2 text-sm font-medium transition-colors">Work</a>
-                        <a href="#about" class="nav-link text-slate-700 hover:text-sky-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <a href="#skills" class="nav-link text-slate-700 hover:text-sky-600 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
-                        <a href="#contact" class="bg-sky-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-sky-600 transition-all hover:shadow-lg hover:shadow-sky-500/30">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-sky-600 p-2">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#home" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-md">Home</a>
-                <a href="#work" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-md">Work</a>
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-md">About</a>
-                <a href="#skills" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-md">Skills</a>
-                <a href="#contact" class="block px-3 py-3 text-base font-medium text-sky-600 font-semibold">Contact Me</a>
-            </div>
-        </div>
-    </nav>
+// Q: [question, [options], correctIndex]
+const PAPERS={
+1:{t:"Part 1: MCQ Bank",q:[
+["Which of the following would be debited to a partner's current account in a partnership where both capital and current accounts are maintained?",["Interest on drawings","Salaries to partners","Interest on capital","Share of profit"],0],
+["Chen's bank ledger balance as at 1 December 20X7 was $53,280 credit. During December: Amounts paid $62,670; Amounts received $52,920; Loan received from bank $20,000; Drawings from bank $10,000; Bank interest charged $1,200. What is Chen's bank general ledger account balance as at 1 January 20X8?",["$54,230 Cr","$63,030 Dr","$51,830 Cr","$52,330 Dr"],0],
+["Sam and Eric are in partnership and share any profits in the ratio 3:4 respectively. The partnership agreement provides for Eric to have a salary of $15,000 per year. The profit for the year was $50,000. What is Sam's total profit appropriation for the year?",["$30,000","$35,000","$21,429","$15,000"],3],
+["Jeff has these transactions in 20X0: cash sales $37,070; payments to suppliers $178,990; receipts from credit customers $245,730; wages paid $76,980; sale of non-current assets with carrying value $56,000 at a profit of $9,000. All cash is banked regularly. Bank at 1 January 20X0 was an overdraft of $245. What cash at bank balance should be shown on Jeff's trial balance at 31 December 20X0?",["$35,585","$12,135","$91,585","$92,075"],2],
+["The closing inventory of ABC Stores: (1) 250 items cost $2 each, all sold for $3 after year end; (2) 600 items cost $5 each, all sold after year end for $4 per item after rectification costs of $150 in total; (3) 1,000 items cost $10 each, all sold after year end for $15 after total selling costs of $2,000. What is the value of closing inventory?",["$15,750","$16,000","$13,500","$12,750"],3],
+["Karen has not kept proper accounting records. All sales are credit sales. Cost of goods sold was $45,000. Gross profit margin was 25%, receivables at the start of the year were $21,000 and receipts from credit customers totalling $47,000 have been banked. What amount should be shown on the statement of financial position for receivables?",["$37,750","$42,000","$34,000","$30,250"],2],
+["James pays $5,600 for twelve months buildings insurance on 1 April 20X5. His year end is 31 December. What is the adjustment required in the financial statements at 31 December 20X5?",["Increase insurance expense by $1,400 and increase accruals in current liabilities","Increase insurance expense by $4,200 and increase prepayments in current assets","Reduce insurance expense by $4,200 and increase accruals in current liabilities","Reduce insurance expense by $1,400 and increase prepayments in current assets"],3],
+["Ana and Bill are in partnership. They share profits and losses in the ratio 3:2. Salaries paid to the partners are $20,000 and $30,000 respectively per annum. Profit for the year was $450,000. What is Bill's total profit appropriation for the year?",["$160,000","$190,000","$230,000","$260,000"],1]
+]},
+2:{t:"Part 2: Past Questions (MA/FIA FA2)",q:[
+["If a transaction leads to an increase in assets, what could the other effect be? (1) A decrease in liabilities (2) An increase in capital (3) A decrease in assets (4) An increase in drawings",["1 and 4","2, 3 and 4","2 and 3 only","1 and 2"],2],
+["How are financial statements affected by the creation of a provision?",["Statement of financial position: Dr Provision; Statement of profit or loss: Cr Expense","Statement of profit or loss: Dr Expense; Statement of profit or loss: Cr Provision","Statement of profit or loss: Dr Expense; Statement of financial position: Cr Provision","Statement of financial position: Dr Expense; Statement of financial position: Cr Provision"],2],
+["Safi is preparing her final accounts for the year ending 31 August 20X9. On 3 October 20X9 an interest charge for $900 appeared on her bank statement for the period 1 July 20X9 to 30 September 20X9. How would this have been reflected in her statement of financial position as at 31 August 20X9?",["$600 Prepayment","$600 Accrual","$300 Accrual","$300 Prepayment"],1],
+["Gertrude has Receivables $10,000 (Dr) and Allowance for receivables $3,000 (Cr) in her trial balance at 31 December 20X1. After the trial balance was prepared, a customer advised their firm will be unable to pay their debt of $1,000. What balances should be included in the extended trial balance after accounting for the non-payment of the debt?",["Receivables $9,000; Allowance $4,000","Receivables $9,000; Allowance $3,000","Receivables $10,000; Allowance $4,000","Receivables $10,000; Allowance $3,000"],1],
+["Connor owned a van. It cost him $20,000. Accumulated depreciation of $7,000 had been charged. When he sold the van he received as consideration $15,000 in cash and inventory worth $2,000. What gain or loss did Connor make on the sale of the van?",["Gain of $2,000","Loss of $5,000","Gain of $4,000","Loss of $3,000"],2],
+["A non-current asset with an original cost of $24,000 and accumulated depreciation of $18,500 was given in part exchange for a new asset costing $28,000. The agreed trade-in value was $7,000. What gain or loss on disposal should be reported in the statement of profit or loss?",["$4,000 Gain","$1,500 Loss","$4,000 Loss","$1,500 Gain"],3],
+["Bilal has Wages $50,000 (Dr) in his trial balance for the year ended 31 December 20X1. A bonus of $5,000 has been agreed but remains unpaid at year end. Bilal does not maintain a separate bonus account. What balances should be included in the extended trial balance after accounting for the bonus?",["Wages $50,000; Accrual $5,000","Wages $55,000; Accrual $5,000","Wages $50,000; Prepayment $5,000","Wages $55,000; Prepayment $5,000"],1],
+["Marcus has recorded a cash purchase as a credit purchase. What journal entry will correct this error?",["Dr Cash; Cr Trade payables","Dr Purchases; Cr Cash","Dr Trade payables; Cr Cash","Dr Purchases; Cr Trade payables"],2]
+]},
+3:{t:"Part 3: Past Examination Questions (ACCA FA2)",q:[
+["Jasdeep acquired a machine for $15,000 on 1 April 20X5. The machine had a useful economic life of four years and a residual value of $2,000. Jasdeep charges depreciation on the straight-line basis at 25% per annum from the date of acquisition. What is Jasdeep's depreciation charge for the year ended 31 December 20X5?",["$2,812.50","$2,437.50","$3,750.00","$3,250.00"],1],
+["Reinhart compared his payables ledger control account with the payables ledger and found: (1) A receipt of $100 from a customer was debited to the payables ledger control account (2) A purchase invoice from T Lane was credited to C Lane's account in the payables ledger (3) A discount received of $25 was not recorded in the payables ledger control account. Which of the errors will require an entry in the general ledger?",["1, 2 and 3","2 and 3 only","1 and 2 only","1 and 3 only"],3],
+["Martha sells office furniture. All of her sales are on credit. Martha is registered for sales tax. What would be the postings to the general ledger from her sales returns day book?",["Dr Receivables; Cr Sales; Cr Sales tax","Dr Receivables; Dr Sales tax; Cr Sales","Dr Sales returns; Dr Sales tax; Cr Receivables","Dr Sales returns; Cr Receivables; Cr Sales tax"],2],
+["Which of the following statements is/are TRUE? (1) For information to be relevant it must be capable of making a difference in decisions because it has predictive value, confirmatory value or both (2) An item is said to be material if its omission or misstatement in the financial statements would influence the economic decisions of users",["Neither 1 nor 2","Both 1 and 2","2 only","1 only"],1],
+["Which of the following is the correct journal entry to record goodwill when a new partner is admitted into a partnership?",["Debit bank account; Credit old partners' capital account on new profit share basis","Debit goodwill account; Credit old partners' capital account on new profit share basis","Debit goodwill account; Credit old partners' capital account on old profit share basis","Debit bank account; Credit old partners' capital account on old profit share basis"],2]
+]}};
 
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 z-0">
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-sky-50 via-white to-blue-50"></div>
-            <div class="absolute top-20 right-0 w-96 h-96 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-            <div class="absolute bottom-20 left-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-            <div class="absolute top-40 left-1/3 w-64 h-64 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 floating"></div>
-        </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 text-center lg:text-left">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-sky-100 text-sky-700 text-sm font-medium mb-4 border border-sky-200">
-                    <span class="flex h-2 w-2 rounded-full bg-sky-500 mr-2 animate-pulse"></span>
-                    Available for Freelance Work
-                </div>
-                <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-tight">
-                    Crafting Visual <br>
-                    <span class="sky-gradient-text font-display italic">Stories</span> That Move
-                </h1>
-                <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    Professional video editor with 2+ years of experience transforming raw footage into compelling narratives. Specializing in cinematic color grading, seamless transitions, and rhythm-driven editing.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#work" class="group inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-sky-500 rounded-full hover:bg-sky-600 transition-all hover:shadow-xl hover:shadow-sky-500/30 hover:-translate-y-1">
-                        View My Work
-                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-sky-600 bg-white border-2 border-sky-200 rounded-full hover:border-sky-500 hover:bg-sky-50 transition-all">
-                        Get in Touch
-                    </a>
-                </div>
-                <div class="flex items-center justify-center lg:justify-start gap-8 pt-4 text-slate-500 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-4 h-4 text-sky-500"></i>
-                        <span>50+ Projects</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-4 h-4 text-sky-500"></i>
-                        <span>2 Years Exp.</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-4 h-4 text-sky-500"></i>
-                        <span>4K Specialist</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hero Video Preview -->
-            <div class="relative lg:h-[600px] flex items-center justify-center">
-                <div class="relative w-full max-w-lg aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-sky-500/20 group cursor-pointer" onclick="openVideoModal('showreel')">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=1000&fit=crop" alt="Video Editing Setup" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 flex items-center justify-center z-20">
-                        <div class="play-button w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <i data-lucide="play" class="w-8 h-8 text-sky-600 ml-1"></i>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-6 left-6 right-6 z-20 text-white">
-                        <p class="text-sm font-medium text-sky-300 mb-1">2024 Showreel</p>
-                        <h3 class="text-xl font-bold">Best of KlantoPlayz</h3>
-                    </div>
-                </div>
-                <!-- Floating Elements -->
-                <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg floating" style="animation-delay: 0.5s;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center">
-                            <i data-lucide="film" class="w-6 h-6 text-sky-600"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-500">Projects</p>
-                            <p class="text-lg font-bold text-slate-900">50+</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg floating" style="animation-delay: 1s;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center">
-                            <i data-lucide="award" class="w-6 h-6 text-sky-600"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-500">Experience</p>
-                            <p class="text-lg font-bold text-slate-900">2 Years</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <i data-lucide="chevron-down" class="w-6 h-6 text-sky-400"></i>
-        </div>
-    </section>
+const NUM={1:[1,2,5,10,11,12,15,31],2:[36,40,44,50,56,66,67,68],3:[70,71,73,74,75]};
+const S=['m','n','t'];
+const X={1:{
+3:['A business has prepared draft final accounts for the year ended 31 December. However, it was subsequently found that carriage outwards had been deducted from the sales for the year. What will be the effect on the gross profit and net profit of correcting this error?',['Gross profit: Increase; Net profit: No effect','Gross profit: Decrease; Net profit: Increase','Gross profit: Increase; Net profit: Decrease','Gross profit: Decrease; Net profit: No effect'],0],
+4:['Which TWO of the following describe the circumstances which lead to a business having incomplete records?',['The owner of the business does not keep a full set of accounts','The owner of the business took cash from the business for personal use','The business only started to trade part way through the year',"Some of the business's accounts were lost or destroyed"],[0,3],'m'],
+6:['Lilac Co traded in machinery which had a carrying amount of $18,500 against a new asset which had a purchase price of $41,000. The company also paid $22,000 cash to purchase the new asset. What is the amount of the profit on disposal of the machinery?',[],500,'n'],
+7:['Taze wishes to replace his delivery van which has a carrying amount of $4,000. The list price of the new van is $12,000. The dealer offered Taze a $5,500 part exchange value for his existing van. What is the gain on disposal made by Taze and the purchase price of the new vehicle?',['Gain on disposal $300; Purchase price $12,000','Gain on disposal $300; Purchase price $6,500','Gain on disposal $1,500; Purchase price $6,500','Gain on disposal $1,500; Purchase price $12,000'],3],
+8:['Which TWO of the following are correct?',['Accounting data should allow the financial performance of a business to be reported','A business maintains financial records only for external use','Banks are unlikely to lend money to a business that does not maintain financial records','Banks will only lend money to a business for the purpose of buying non-current assets'],[0,2],'m'],
+9:['Which of the following statements is NOT true in respect of the importance of maintaining internal records?',['To give detailed reports for management to use in decision making','To track current customers and monitor how credit customers are paying','To make detailed reports available for potential investors to decide if to make an investment','To gather employee information and operational efficiency at a department level'],2],
+13:['Samuel has a bank general ledger account (Balance b/f 12,000; Sales 26,000; Purchases; Expenses). What is calculated when Samuel balances off the bank general ledger account? 1. The bank balance for inclusion in the trial balance 2. The opening bank balance for the next accounting period 3. The bank balance to be reconciled with the bank statement',['1 and 3 only','2 and 3 only','1 and 2 only','1, 2 and 3'],3],
+14:["Andrew's bank statement shows a balance of $5,600. He is preparing his bank reconciliation. What is the effect of each of the following reconciling adjustments on the bank statement balance?",['Uncleared lodgements','Unpresented cheques'],[0,1],'t',['Increases','Decreases']],
+16:['Arnold purchased and received materials at a cost of $100 per unit. The supplier allowed a trade discount of 20% and charged $5 per unit for delivery. Arnold intends to improve the materials: labour cost $10 per unit and production overhead $15 per unit. Selling price will be $180 per unit. At what cost should 100 units of the raw material be carried in inventory?',['$8,400','$10,900','$8,500','$11,000'],2],
+17:['Gower received a year-end bank statement presenting a balance of $12,800 (credit). Included were bank charges of $270 which Gower was previously unaware of. Gower has sent cheques totalling $4,800 to suppliers but they are yet to receive these. Gower also has $5,100 of customer receipts stored in a safe, to be deposited after year end. Gower does not recognise petty cash separately from bank. What is the correct, reconciled bank balance?',[],13100,'n'],
+18:['Which TWO of the following would be entries in the capital accounts when a new partner is admitted?',['Salaries','Capital introduced','Goodwill','Share of profits'],[1,2],'m'],
+19:['Marcela uses a basic computerised accounting package. An imbalanced manual journal entry is automatically balanced by posting to a suspense account. A $300 (credit) suspense account has been reported on the trial balance. Which would explain the difference?',['A manual journal entry for a $600 cash receipt from a credit customer was debited correctly to bank but credited to trade receivables with only $300','Maintenance costs of $300 were incorrectly coded to depreciation charges','A manual journal entry for rent received of $150 was debited to bank and credited to other income','A $300 accrual for heat and light expenses was omitted from the general ledger'],0],
+20:['Haruka made a credit sale for $3,600, inclusive of sales tax at 20%. Which journal entry shows the correct recognition of this sale?',['Dr Trade receivables $3,600; Cr Sales $3,000; Cr Sales tax $600','Dr Sales $3,000; Dr Sales tax account $600; Cr Trade receivables $3,600','Dr Trade receivables $3,600; Cr Sales $3,600','Dr Trade receivables $3,000; Cr Sales $3,000'],0],
+21:['Lin has discovered these errors in manual journal entries: 1. A receipt from a credit customer was recognised as a cash sale 2. Cash purchase of goods recorded with a debit of $600 but a credit of $900 to bank, the system creating a suspense account 3. Electricity invoice coded to depreciation charges 4. A credit sale for $1,000 was input as only $100. Which errors could be detected by extracting a trial balance?',['2 and 3 only','2 only','1, 3 and 4 only','1, 2, 3 and 4'],1],
+22:['Trade payables general ledger account: Purchases $174,163; Purchase returns $12,951; Discount received $2,046; Contras with trade receivables $6,150; Bank payments $153,484. Opening balance was $26,667. What is the closing balance?',[],26199,'n'],
+23:['Which of the following should be classified as expenses charged to profit or loss? 1. $25,000 wages paid to demolish a wall to provide additional factory space 2. $20,000 paid under a maintenance agreement for photocopiers 3. $40,000 paid to modify delivery vans to carry heavier loads 4. $60,000 paid to re-decorate the admin building',['2 and 4','3 and 4','1 and 3','1 and 2'],0],
+24:["Victoria's cash records for May: Opening cash float $250; Sales $1,600; Purchases $1,150; Sundry expenses $100; Drawings $120. At month end she deposits into the bank any cash left, always keeping a float of $250. What is the total bank deposit for May?",[],230,'n'],
+25:['A bookkeeper made these errors: 1. Rent received of $4,000 was debited to the rent payable account 2. Rent paid of $2,600 was credited to the rent receivable account. A suspense account is used to correct errors. Which journal will correct the errors?',['Dr Suspense $2,800; Cr Rent receivable $1,400; Cr Rent payable $1,400','Dr Rent receivable $1,400; Dr Rent payable $1,400; Cr Suspense $2,800','Dr Suspense $1,400; Cr Rent receivable $700; Cr Rent payable $700'],0],
+26:['Year end 30 June. Premiums are paid annually in advance. Policy 1: annual premium $18,000, expiry 31 October 20X8. Policy 2: annual premium $42,000, expiry 31 May 20X9. What should be included for prepaid insurance at 30 June 20X8?',[],44500,'n'],
+27:['Bob had net assets at 1 January 20X6 of $22,500 and at 31 December 20X6 of $42,200. During the year he transferred his private car to the business at $6,000 and withdrew $12,500 in living expenses. What was the profit for the year?',['$26,200','$38,200','$1,200','$13,200'],0],
+28:["Mateo's sales are all on credit. On 1 January 20X6 trade receivables were $132,600. Cash receipts from customers were $901,000 in the year and $1,900 was written off. On 31 December 20X6 trade receivables were $139,700. What were Mateo's sales for the year?",[],910000,'n'],
+29:['Maya is registered for sales tax at 17.5%. Sales at standard rate (including sales tax): $25,850. Sales at zero rate: $21,000. What figure for sales is recorded in the statement of profit or loss?',[],43000,'n'],
+30:['John has a trade receivables balance of $45,500 at the year end and an opening receivables allowance of $2,500. He estimates an allowance of 5% of trade receivables. How is his profit for the year affected?',['Increase in profit for the year of $350','Decrease in profit for the year of $225','No effect on profit for the year','Increase in profit for the year of $225'],3],
+32:['Alexandre uses a computerised accounting system with many general ledger account codes, including a general ledger code for total receivables and payables. Which TWO best describe the purpose of these general ledger account codes?',['To provide a record of each transaction the business has entered','To see how much is owed by each individual customer','To allow management to obtain detailed transactional management information','To see how much is owed to each individual supplier'],[0,2],'m'],
+33:["Nigel's capital at 1 January 20X9 was $63,000 and at 31 December 20X9 $94,000. He paid in additional capital of $15,000, obtained a bank loan of $10,000 and made a profit of $27,000. What were Nigel's drawings for the year?",[],11000,'n'],
+34:['Fiona borrowed $100,000 on 1 April 20X7, repayable in equal half-yearly instalments over ten years. The first repayment was made on time on 1 October 20X7. How should the amount owed be presented at 31 December 20X7?',['$5,000 current liability and $85,000 non-current liability','$10,000 current liability and $90,000 non-current liability','$5,000 current liability and $90,000 non-current liability','$10,000 current liability and $85,000 non-current liability'],3]
+},2:{
+35:['On 1 May 20X0, Luis took out a bank loan for $60,000. Capital repayments of $2,000 have been made on the 15th of each month, the first on 15 August 20X0. How should the loan be reported at 30 April 20X2?',['Current liability $24,000; Non-current liability $18,000','Current liability $18,000; Non-current liability Nil','Current liability Nil; Non-current liability $18,000','Current liability Nil; Non-current liability $42,000'],1],
+37:['Charlotte made these post trial balance adjustments at 31 December 20X0: Accruals $5,000; Prepayments $3,000; Depreciation $10,000; Reduced allowance for receivables by $4,000; Reduced warranty provision by $2,000. By what amount was profit reduced?',[],6000,'n'],
+38:['James sold a non-current asset for $13,000. It had cost $25,000 and $15,000 depreciation had been charged. What adjusting entries are required in the extended trial balance?',['Non-current assets at cost $25,000','Accumulated depreciation $15,000'],[1,0],'t',['Debit','Credit']],
+39:['Which TWO of the following would be included in the cost of inventory?',['Future costs to complete','Delivery and handling costs','Settlement discounts','The purchase price'],[1,3],'m'],
+41:['Which of these trial balance accounts will appear in the opening trial balance at the start of the next period? (1) Bank overdraft (2) Carriage outwards (3) Irrecoverable debt expense (4) Accumulated depreciation (5) Interest on the bank overdraft',['1 and 5','2 and 5','1 and 4','2 and 3'],2],
+42:['Which errors would be detected by a trial balance? (1) The purchase of a second hand van had been incorrectly classified as motor expenses (2) A sales invoice of $1,000 had been omitted from the accounting records',['Neither 1 nor 2','1 only','2 only','Both 1 and 2'],0],
+43:['Which of the following is the purpose of the books of prime entry?',['To record only cash transactions between the business, its customers and suppliers','To record only credit transactions between the business, its customers and suppliers','To record the daily transactions of the business','To record the double entry of each business transaction'],2],
+45:['Are the following statements about capital expenditure true or false?',['(i) If capital expenditure of $10,000 to buy land is incorrectly treated as revenue expenditure, profit will be understated by $10,000','(ii) Repairs to a building will always be treated as capital expenditure'],[0,1],'t',['TRUE','FALSE']],
+46:['Opening trade receivables $95,350; Sales invoices $690,716; Sales credit notes $20,320; Cash received $648,717; Irrecoverable debts written off $5,090; Cash refund given to credit customer $150; Contra with trade payables $1,600. What is the balance on the trade receivables control account at the period end?',[],110489,'n'],
+47:['The accrual for electricity had been understated. What is the impact of the correction?',['Profit reduces and liabilities increase','Profit increases and assets reduce','Profit increases and assets increase','Profit reduces and liabilities reduce'],0],
+48:['At 1 October 20X1 the opening balance on Olaf\u2019s sales tax control account was $12,360 credit. During the quarter ended 31 December 20X1 input tax was $23,160 and a payment was made to the tax authority of $12,900. At 31 December 20X1 the closing balance was $13,800 credit. Sales tax is levied at 20%. What was the sales figure (excluding sales tax) for the quarter ended 31 December 20X1?',['$183,150','$219,780','$123,150','$251,075'],2],
+49:['Devi, a sole trader, bought a new motor car for $15,000. She took out a business loan of $9,600 and paid the balance from her personal bank account. What journal entries should be used?',['Dr Loan $9,600; Dr Capital $5,400; Cr Motor vehicles $15,000','Dr Motor vehicles $15,000; Cr Loan $9,600; Cr Capital $5,400','Dr Loan $9,600; Dr Cash at bank $5,400; Cr Motor vehicles $15,000','Dr Motor vehicles $15,000; Cr Loan $9,600; Cr Cash at bank $5,400'],1],
+51:['What is the correct accounting treatment for interest charged on partners’ drawings?',['Show as an expense in the statement of profit or loss','Add to profit shown in the statement of profit or loss when appropriating profit among partners','Deduct from profit shown in the statement of profit or loss when appropriating profit among partners','Show as income in the statement of profit or loss'],1],
+52:['A set of accounts will be prepared on the assumption that the business will continue trading for the foreseeable future and has no intention of going into liquidation. Assets will not be valued at their break-up values. Which accounting principle is described?',['Consistency','Materiality','Historical cost','Going concern'],3],
+53:['Which would be recorded in a partner’s current account? (1) Interest on capital (2) Interest on drawings (3) Share of residual profit (4) New capital introduced',['1, 2 and 3 only','1, 2, 3 and 4','1 and 2 only','3 and 4 only'],0],
+54:['Which TWO of the following are reasons for extracting a trial balance?',['To ensure all transactions are in the correct ledger account','To ensure all transactions have been recorded in the books of prime entry','To summarise the ledger account balances','To ensure double entry has been maintained'],[2,3],'m'],
+55:['In an extended trial balance the debit column of the statement of profit or loss section adds up to $112,000. The credit column adds up to $111,100. What does this mean?',['There is a cash balance of $900','The difference of $900 should be investigated; the two columns should always agree','A profit of $900 has been made','A loss of $900 has been made'],3],
+57:['Which column in the extended trial balance would the following be extended to?',['Bank overdraft','Opening inventory','Insurance expense','Prepayments'],[1,0,0,1],'t',['Statement of profit or loss','Statement of financial position']],
+58:['Which TWO of the following would be recorded in the journal?',['Discount allowed','Cash received','Correction of errors','Depreciation charge'],[2,3],'m'],
+59:['At the beginning of the month Rob had a debit balance on his cash account of $1,240. He received cash of $300 from credit customers, made cash sales of $550 and spent $475 in cash on materials. What figure should be in his trial balance for the cash account?',[],1615,'n'],
+60:['Sarah has decided to increase her receivables allowance. What entries should she make in her general ledger?',['Dr Receivables allowance; Cr Receivables expense','Dr Receivables allowance; Cr Receivables control','Dr Receivables control; Cr Receivables allowance','Dr Receivables expense; Cr Receivables allowance'],3],
+61:['At the end of the year, Tank has not received his telephone bill relating to the last quarter. Will each be debited or credited to record this outstanding bill?',['Telephone','Accruals'],[0,1],'t',['Debit','Credit']],
+62:['Are the following statements about inventory true or false?',['(i) Closing inventory is a debit to cost of sales','(ii) Inventory appears in the statement of financial position as a current liability'],[1,1],'t',['TRUE','FALSE']],
+63:['Which TWO of the account balances would appear on the credit side of a trial balance?',['Purchases','Prepayments','Capital','Carriage inwards','Carriage outwards','Bank overdraft'],[2,5],'m'],
+64:['Which are TRUE in relation to sales tax? (1) A registered entity collects the sales tax on behalf of the tax authority (2) Sales tax is borne by the final consumer (3) A registered entity cannot reclaim the sales tax on its purchases and expenses (4) All entities must charge sales tax on their output',['1 and 2 only','1, 2 and 3 only','1, 2, 3 and 4','2 and 4 only'],0],
+65:['Gower has a bank statement showing a balance at the bank of $12,000 after charges of $270. He is about to send cheques totalling $4,800 to suppliers (written yesterday). He also holds a customer cheque for $5,100, received and recorded in the cash received day book yesterday. What is the correct balance of cash at bank for the financial statements?',[],12300,'n']
+},3:{
+69:['A trainee has prepared the following payables control account: Cash paid to suppliers $13,860; Purchases day book total $31,540; Contra with receivables control account $500; b/d $17,000. The list of balances from the payables ledger has been agreed with all suppliers, but does not reconcile to the payables control account. Which adjustment will correct the error?',['Record the contra with the receivables control account on the debit side of the account','Record the cash paid to suppliers on the credit side of the account','Include cash purchases from the cash book','Record the b/d balance on the debit side of the account'],0],
+72:['Which TWO of the following statements about bank reconciliations are correct?',['Bank charges that appear on the bank statement must be debited in the cash book','An overdraft balance will be shown as a debit on the bank statement','Outstanding lodgements must be separately debited in the cash book','A cheque from a customer paid into the bank but dishonoured must be corrected by making a credit entry in the cash book'],[1,3],'m'],
+76:['IAS 2 requires inventory to be stated at the lower of cost and net realisable value. Are the statements correct?',['(1) The cost of inventories can be calculated using FIFO or weighted average cost','(2) The costs of purchase comprise the purchase price and directly attributable import duties and other costs, less trade discounts and rebates'],[0,0],'t',['TRUE','FALSE']],
+77:['How is interest on partners’ capital recorded in the following ledger accounts?',['Bank account','Partners’ capital accounts','Profit or loss appropriation account','Partners’ current accounts'],[2,2,0,1],'t',['Debit','Credit','No entry']],
+78:['The balance on Brian’s receivables ledger control account is $54,000. Errors: (1) The sales day book total was overcast by $5,000 (2) The cash receipts total was recorded as $67,000 instead of $76,000. What is the correct balance?',[],40000,'n'],
+79:['A business is building a new office block and incurred: (1) $10,000 legal fees to acquire land (2) $35,000 building materials (3) $5,000 to clean the site prior to commencing the building. How much should be capitalised?',[],50000,'n']
+}};
+for(const k in PAPERS){const q=PAPERS[k].q;q.forEach((e,j)=>e.n=NUM[k][j]);for(const n in X[k]){const e=X[k][n];e.n=+n;q.push(e)}q.sort((a,b)=>a.n-b.n)}
 
-    <!-- Selected Work Section -->
-    <section id="work" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-semibold text-sky-600 tracking-wide uppercase mb-2">Portfolio</h2>
-                <h3 class="text-4xl font-bold text-slate-900 mb-4">Selected Works</h3>
-                <p class="text-slate-600 max-w-2xl mx-auto">A curated collection of projects showcasing editing techniques, color grading, and storytelling across various genres.</p>
-            </div>
 
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button class="filter-btn active px-6 py-2 rounded-full text-sm font-medium bg-sky-500 text-white transition-all" data-filter="all">All</button>
-                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-sky-100 hover:text-sky-600 transition-all" data-filter="commercial">Commercial</button>
-                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-sky-100 hover:text-sky-600 transition-all" data-filter="music">Music Videos</button>
-                <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-600 hover:bg-sky-100 hover:text-sky-600 transition-all" data-filter="social">Social Content</button>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card group relative overflow-hidden rounded-2xl cursor-pointer hover-lift" data-category="commercial" onclick="openVideoModal('project1')">
-                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=450&fit=crop" alt="Commercial Project" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Commercial</span>
-                            <span class="text-xs text-slate-400">2024</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Urban Pulse</h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">Fast-paced commercial edit for streetwear brand featuring dynamic transitions and urban color grading.</p>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card group relative overflow-hidden rounded-2xl cursor-pointer hover-lift" data-category="music" onclick="openVideoModal('project2')">
-                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&h=450&fit=crop" alt="Music Video" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Music Video</span>
-                            <span class="text-xs text-slate-400">2024</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Neon Dreams</h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">Cinematic music video editing with synchronized beat cuts and neon color palette.</p>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card group relative overflow-hidden rounded-2xl cursor-pointer hover-lift" data-category="social" onclick="openVideoModal('project3')">
-                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=450&fit=crop" alt="Social Media Content" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">Social Content</span>
-                            <span class="text-xs text-slate-400">2023</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Viral Shorts</h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">High-engagement vertical video content optimized for TikTok and Instagram Reels.</p>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card group relative overflow-hidden rounded-2xl cursor-pointer hover-lift" data-category="commercial" onclick="openVideoModal('project4')">
-                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=450&fit=crop" alt="Corporate Video" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Commercial</span>
-                            <span class="text-xs text-slate-400">2023</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Tech Forward</h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">Product launch video featuring clean typography and modern motion graphics.</p>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card group relative overflow-hidden rounded-2xl cursor-pointer hover-lift" data-category="music" onclick="openVideoModal('project5')">
-                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=450&fit=crop" alt="Concert Edit" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Music Video</span>
-                            <span class="text-xs text-slate-400">2023</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Live Energy</h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">Multi-camera concert edit with crowd-synced cuts and atmospheric lighting.</p>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card group relative overflow-hidden rounded-2xl cursor-pointer hover-lift" data-category="social" onclick="openVideoModal('project6')">
-                    <div class="aspect-video bg-slate-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop" alt="YouTube Content" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">Social Content</span>
-                            <span class="text-xs text-slate-400">2022</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Creator Series</h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">Long-form YouTube documentary editing with narrative pacing and B-roll integration.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-sky-100/50 to-transparent"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-sky-500/10">
-                        <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=1000&fit=crop" alt="KlantoPlayz Editing" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
-                        <div class="flex items-center gap-4 mb-3">
-                            <div class="flex -space-x-2">
-                                <div class="w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center text-white text-xs font-bold">Pr</div>
-                                <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white text-xs font-bold">Ae</div>
-                                <div class="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs font-bold">Da</div>
-                            </div>
-                        </div>
-                        <p class="text-sm font-semibold text-slate-900">Adobe Creative Suite Expert</p>
-                        <p class="text-xs text-slate-500 mt-1">Professional workflow optimization</p>
-                    </div>
-                </div>
-                
-                <div class="space-y-6">
-                    <h2 class="text-sm font-semibold text-sky-600 tracking-wide uppercase">About Me</h2>
-                    <h3 class="text-4xl font-bold text-slate-900">KlantoPlayz</h3>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <p>
-                            With over 2 years of professional video editing experience, I've developed a keen eye for storytelling through motion. My journey began with gaming content creation, which evolved into a passion for cinematic editing and color grading.
-                        </p>
-                        <p>
-                            I specialize in creating engaging content across multiple platforms—from high-energy TikToks to polished commercial advertisements. My editing style emphasizes rhythm, emotional pacing, and visual coherence that keeps viewers engaged from the first frame to the last.
-                        </p>
-                        <p>
-                            Whether it's syncing cuts to music beats, crafting seamless transitions, or applying cinematic color grades, I bring technical precision and creative flair to every project.
-                        </p>
-                    </div>
-                    
-                    <!-- Timeline -->
-                    <div class="mt-8 space-y-6">
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center">
-                                <div class="w-3 h-3 rounded-full bg-sky-500"></div>
-                                <div class="w-0.5 h-full bg-sky-200"></div>
-                            </div>
-                            <div class="pb-6">
-                                <span class="text-sm font-semibold text-sky-600">2024 - Present</span>
-                                <h4 class="text-lg font-bold text-slate-900 mt-1">Freelance Video Editor</h4>
-                                <p class="text-slate-600 text-sm mt-1">Working with brands and creators worldwide</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center">
-                                <div class="w-3 h-3 rounded-full bg-sky-400"></div>
-                                <div class="w-0.5 h-full bg-sky-200"></div>
-                            </div>
-                            <div class="pb-6">
-                                <span class="text-sm font-semibold text-sky-600">2022 - 2024</span>
-                                <h4 class="text-lg font-bold text-slate-900 mt-1">Content Editor</h4>
-                                <p class="text-slate-600 text-sm mt-1">Built portfolio editing gaming and lifestyle content</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-sm font-semibold text-sky-600 tracking-wide uppercase mb-2">Expertise</h2>
-                <h3 class="text-4xl font-bold text-slate-900 mb-4">Technical Proficiency</h3>
-                <p class="text-slate-600 max-w-2xl mx-auto">Mastering industry-standard tools and techniques to deliver professional-grade content.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skill Card 1 -->
-                <div class="glass-card p-8 rounded-2xl hover-lift border border-sky-100">
-                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="scissors" class="w-7 h-7 text-sky-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Video Editing</h4>
-                    <p class="text-slate-600 text-sm mb-4">Precision cutting, pacing, and rhythm synchronization</p>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="skill-bar bg-sky-500 h-2 rounded-full" style="width: 0%" data-width="95%"></div>
-                    </div>
-                    <span class="text-xs text-slate-500 mt-2 inline-block">95% Proficiency</span>
-                </div>
-
-                <!-- Skill Card 2 -->
-                <div class="glass-card p-8 rounded-2xl hover-lift border border-sky-100">
-                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="palette" class="w-7 h-7 text-purple-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Color Grading</h4>
-                    <p class="text-slate-600 text-sm mb-4">Cinematic LUTs, color correction, and mood enhancement</p>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="skill-bar bg-purple-500 h-2 rounded-full" style="width: 0%" data-width="90%"></div>
-                    </div>
-                    <span class="text-xs text-slate-500 mt-2 inline-block">90% Proficiency</span>
-                </div>
-
-                <!-- Skill Card 3 -->
-                <div class="glass-card p-8 rounded-2xl hover-lift border border-sky-100">
-                    <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="zap" class="w-7 h-7 text-pink-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Motion Graphics</h4>
-                    <p class="text-slate-600 text-sm mb-4">Text animations, lower thirds, and visual effects</p>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="skill-bar bg-pink-500 h-2 rounded-full" style="width: 0%" data-width="85%"></div>
-                    </div>
-                    <span class="text-xs text-slate-500 mt-2 inline-block">85% Proficiency</span>
-                </div>
-
-                <!-- Skill Card 4 -->
-                <div class="glass-card p-8 rounded-2xl hover-lift border border-sky-100">
-                    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="music" class="w-7 h-7 text-cyan-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Sound Design</h4>
-                    <p class="text-slate-600 text-sm mb-4">Audio mixing, SFX integration, and music synchronization</p>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="skill-bar bg-cyan-500 h-2 rounded-full" style="width: 0%" data-width="88%"></div>
-                    </div>
-                    <span class="text-xs text-slate-500 mt-2 inline-block">88% Proficiency</span>
-                </div>
-
-                <!-- Skill Card 5 -->
-                <div class="glass-card p-8 rounded-2xl hover-lift border border-sky-100">
-                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="smartphone" class="w-7 h-7 text-indigo-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Social Optimization</h4>
-                    <p class="text-slate-600 text-sm mb-4">Platform-specific formats, captions, and engagement hooks</p>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="skill-bar bg-indigo-500 h-2 rounded-full" style="width: 0%" data-width="92%"></div>
-                    </div>
-                    <span class="text-xs text-slate-500 mt-2 inline-block">92% Proficiency</span>
-                </div>
-
-                <!-- Skill Card 6 -->
-                <div class="glass-card p-8 rounded-2xl hover-lift border border-sky-100">
-                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="clock" class="w-7 h-7 text-emerald-600"></i>
-                    </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-2">Fast Delivery</h4>
-                    <p class="text-slate-600 text-sm mb-4">Efficient workflow management and quick turnaround times</p>
-                    <div class="w-full bg-slate-200 rounded-full h-2">
-                        <div class="skill-bar bg-emerald-500 h-2 rounded-full" style="width: 0%" data-width="96%"></div>
-                    </div>
-                    <span class="text-xs text-slate-500 mt-2 inline-block">96% Proficiency</span>
-                </div>
-            </div>
-
-            <!-- Software Tags -->
-            <div class="mt-16 flex flex-wrap justify-center gap-3">
-                <span class="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 text-sm font-medium border border-slate-200">Adobe Premiere Pro</span>
-                <span class="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 text-sm font-medium border border-slate-200">After Effects</span>
-                <span class="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 text-sm font-medium border border-slate-200">DaVinci Resolve</span>
-                <span class="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 text-sm font-medium border border-slate-200">Audition</span>
-                <span class="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 text-sm font-medium border border-slate-200">Photoshop</span>
-                <span class="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 text-sm font-medium border border-slate-200">Media Encoder</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials/Stats Section -->
-    <section class="py-24 sky-gradient-bg text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div class="space-y-2">
-                    <div class="text-5xl font-bold">50+</div>
-                    <div class="text-sky-100 text-sm uppercase tracking-wide">Projects Completed</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-5xl font-bold">2+</div>
-                    <div class="text-sky-100 text-sm uppercase tracking-wide">Years Experience</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-5xl font-bold">30+</div>
-                    <div class="text-sky-100 text-sm uppercase tracking-wide">Happy Clients</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-5xl font-bold">100%</div>
-                    <div class="text-sky-100 text-sm uppercase tracking-wide">Satisfaction Rate</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16">
-                <div class="space-y-6">
-                    <h2 class="text-sm font-semibold text-sky-600 tracking-wide uppercase">Get in Touch</h2>
-                    <h3 class="text-4xl font-bold text-slate-900">Let's Create Something Amazing</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Ready to bring your vision to life? I'm always open to discussing new projects, creative ideas, or opportunities to be part of your story.
-                    </p>
-                    
-                    <div class="space-y-4 pt-4">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center">
-                                <i data-lucide="mail" class="w-6 h-6 text-sky-600"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-slate-500">Email</p>
-                                <p class="text-slate-900 font-medium">klantoplayz@email.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-sky-600"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-slate-500">Location</p>
-                                <p class="text-slate-900 font-medium">Available Worldwide (Remote)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 pt-6">
-                        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all border border-slate-200">
-                            <i data-lucide="youtube" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all border border-slate-200">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all border border-slate-200">
-                            <i data-lucide="twitter" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-sky-600 hover:bg-sky-50 transition-all border border-slate-200">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent! (Demo only)');">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-2">Name</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all" placeholder="Your name">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-2">Email</label>
-                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all" placeholder="your@email.com">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-2">Project Type</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all">
-                                <option>Commercial</option>
-                                <option>Music Video</option>
-                                <option>Social Media Content</option>
-                                <option>YouTube Video</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all resize-none" placeholder="Tell me about your project..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-4 bg-sky-500 text-white rounded-lg font-medium hover:bg-sky-600 transition-all hover:shadow-lg hover:shadow-sky-500/30 flex items-center justify-center gap-2">
-                            Send Message
-                            <i data-lucide="send" class="w-4 h-4"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-2xl font-bold text-white">
-                Klanto<span class="text-sky-500">Playz</span>
-            </div>
-            <div class="text-sm">
-                © 2024 KlantoPlayz. All rights reserved.
-            </div>
-            <div class="flex gap-6 text-sm">
-                <a href="#" class="hover:text-sky-400 transition-colors">Privacy</a>
-                <a href="#" class="hover:text-sky-400 transition-colors">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Video Modal -->
-    <div id="video-modal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" onclick="closeVideoModal()"></div>
-        <div class="absolute inset-4 md:inset-12 bg-black rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
-            <button onclick="closeVideoModal()" class="absolute top-4 right-4 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all z-10">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-            <div class="text-white text-center p-8">
-                <i data-lucide="film" class="w-16 h-16 mx-auto mb-4 text-sky-500 opacity-50"></i>
-                <p class="text-lg">Video Player</p>
-                <p class="text-sm text-slate-400 mt-2">Demo: Video would play here</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Custom Cursor
-        const cursor = document.getElementById('cursor');
-        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-        
-        if (!isTouchDevice && cursor) {
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX - 10 + 'px';
-                cursor.style.top = e.clientY - 10 + 'px';
-            });
-
-            document.querySelectorAll('a, button, .project-card').forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-            });
-        }
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
-            } else {
-                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
-            }
-        });
-
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Project Filtering
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button
-                filterBtns.forEach(b => {
-                    b.classList.remove('bg-sky-500', 'text-white');
-                    b.classList.add('bg-slate-100', 'text-slate-600');
-                });
-                btn.classList.remove('bg-slate-100', 'text-slate-600');
-                btn.classList.add('bg-sky-500', 'text-white');
-
-                const filter = btn.getAttribute('data-filter');
-                
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.9)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Video Modal
-        function openVideoModal(project) {
-            const modal = document.getElementById('video-modal');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            
-            // Animate in
-            gsap.fromTo(modal.querySelector('.absolute.inset-4'), 
-                { scale: 0.9, opacity: 0 },
-                { scale: 1, opacity: 1, duration: 0.3, ease: 'power2.out' }
-            );
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('video-modal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Skill Bars Animation
-        const skillBars = document.querySelectorAll('.skill-bar');
-        const skillsSection = document.getElementById('skills');
-
-        const animateSkills = () => {
-            skillBars.forEach(bar => {
-                const width = bar.getAttribute('data-width');
-                bar.style.width = width;
-            });
-        };
-
-        // Intersection Observer for Skills
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateSkills();
-                    skillsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-
-        skillsObserver.observe(skillsSection);
-
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Animate project cards on scroll
-        gsap.from('.project-card', {
-            scrollTrigger: {
-                trigger: '#projects-grid',
-                start: 'top 80%',
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: 'power3.out'
-        });
-
-        // Animate skill cards
-        gsap.from('.glass-card', {
-            scrollTrigger: {
-                trigger: '#skills',
-                start: 'top 70%',
-            },
-            y: 30,
-            opacity: 0,
-            duration: 0.6,
-            stagger: 0.1,
-            ease: 'power2.out'
-        });
-
-        // Animate about section
-        gsap.from('#about .relative', {
-            scrollTrigger: {
-                trigger: '#about',
-                start: 'top 70%',
-            },
-            x: -50,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out'
-        });
-
-        gsap.from('#about .space-y-6', {
-            scrollTrigger: {
-                trigger: '#about',
-                start: 'top 70%',
-            },
-            x: 50,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out'
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Close modal on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeVideoModal();
-            }
-        });
-    </script>
-</body>
-</html>
+const app=document.getElementById('app');
+let sel=null,paper=null,i=0,ans=[],shown=[],tried=[],timer=null,secs=5700;
+const typ=q=>q[3]||'s';
+function num(a){return Math.abs(parseFloat(String(a).replace(/[,$\s]/g,'')))}
+function ok(q,a){const t=typ(q);if(a==null||a==='')return false;
+ if(t=='s')return a===q[2];
+ if(t=='m')return a.length===q[2].length&&[...a].sort((x,y)=>x-y).join()===q[2].join();
+ if(t=='t')return q[2].every((v,r)=>a[r]===v);
+ const v=num(a);return !isNaN(v)&&Math.abs(v-q[2])<0.005}
+function fmt(s){const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return h+':'+String(m).padStart(2,'0')+':'+String(x).padStart(2,'0')}
+function push(st,h){try{history.pushState(st,'',h)}catch(e){}}
+function hdr(){
+ const n=PAPERS[paper].q.length,pct=Math.round(i/n*100);
+ return `<div class="hd"><div class="logo">ACCA</div>
+ <div class="cell"><span>Question ${PAPERS[paper].q[i].n}</span></div>
+ <div class="cell"><span id="mk">${ok(PAPERS[paper].q[i],ans[i])?'1 of 1':'0 of 1'} marks</span></div>
+ <div class="cell"><span>Time Remaining</span><b id="tm">${fmt(secs)}</b></div>
+ <div class="cell prog"><div class="bar"><i style="width:${pct}%"></i><span>Exam ${pct}% Complete</span></div><span style="color:var(--org);font-size:13px;margin-top:3px">&#9776; Test Progress Details &#9660;</span></div>
+ <div class="cell org" style="border-left:1px solid var(--line)">FA2-Maintaining Financial Records</div>
+ <div class="exit" onclick="home()"><u>&#10162;</u>Exit</div></div>`;
+}
+function renderHome(){
+ clearInterval(timer);paper=null;
+ app.innerHTML=`<main class="home"><div class="logo" style="margin:0 auto;height:56px;width:90px;font-size:26px">ACCA</div>
+ <h1>FA2 – Maintaining Financial Records</h1><p>Choose a past paper section, then press Start.</p>
+ ${Object.keys(PAPERS).map(k=>`<button class="pp ${sel==k?'sel':''}" onclick="sel=${k};renderHome()">Past Paper ${k}<small>${PAPERS[k].t} · ${PAPERS[k].q.length} questions</small></button>`).join('')}
+ <button class="p" style="margin-top:12px" ${sel?'':'disabled'} onclick="start()">Start</button></main>`;
+}
+function home(){renderHome();push({v:'home'},'#home')}
+function start(){paper=sel;i=0;ans=[];shown=[];tried=[];secs=5700;clearInterval(timer);
+ timer=setInterval(()=>{secs--;const e=document.getElementById('tm');if(e)e.textContent=fmt(secs);if(secs<=0)finish()},1000);
+ push({v:'q',i:0},'#q1');show()}
+function go(n){i=n;push({v:'q',i:n},'#q'+(n+1));show()}
+function show(){
+ const q=PAPERS[paper].q[i],n=PAPERS[paper].q.length,t=typ(q),a=ans[i],sh=shown[i];let b='',sub='';
+ if(t=='s'){
+  b=q[1].map((o,k)=>{let cl='';if(a===k)cl=ok(q,a)?'ok':'bad';else if(sh&&k===q[2])cl='ok';
+   return `<div class="opt ${cl}" onclick="pick(${k})"><span class="r"></span><span>${o}</span></div>`}).join('')}
+ else if(t=='m'){
+  const sa=a||[],full=sa.length>=q[2].length;sub=`<p class="sub">Select ${q[2].length} answers</p>`;
+  b=q[1].map((o,k)=>{const on=sa.includes(k);let cl='';
+   if(on){cl=full?(q[2].includes(k)?'ok':'bad'):'on'}else if(sh&&q[2].includes(k))cl='ok';
+   return `<div class="opt ${cl}" onclick="pick(${k})"><span class="r sq ${on&&!full?'':''}"></span><span>${o}</span></div>`}).join('')}
+ else if(t=='t'){
+  b='<table class="tb"><tr><th></th>'+q[4].map(h=>`<th>${h}</th>`).join('')+'</tr>'+q[1].map((o,r)=>`<tr><td>${o}</td>`+q[4].map((h,k)=>{
+   const on=(a||[])[r]===k;let cl='';
+   if(on)cl=q[2][r]===k?'ok':'bad';else if(sh&&q[2][r]===k)cl='ok';
+   return `<td class="${cl}" onclick="pick(${r},${k})"><span class="r ${on?'on':''}"></span></td>`}).join('')+'</tr>').join('')+'</table>'}
+ else{
+  const g=ok(q,a),bad=tried[i]&&!g&&a!=null&&a!=='';
+  b=`<div style="font-size:16px">$ <input id="nv" class="nv ${g?'good':bad?'badv':''}" value="${a??''}" inputmode="decimal" autocomplete="off" oninput="numIn(this)" onkeydown="if(event.key=='Enter')sub()"></div>`+(sh?`<p class="hint">Correct answer: $${q[2].toLocaleString()}</p>`:'')}
+ const nm=t=='n';
+ app.innerHTML=hdr()+`<main><p class="q">${q[0]}</p>${sub}${b}<div class="nav"><button ${i?'':'disabled'} onclick="go(i-1)">Previous</button>`+
+  (nm?'<button onclick="sub()">Check</button>':'')+`<button class="s" onclick="shown[i]=1;show()">Show answer</button>
+  <button class="p" onclick="${i<n-1?'go(i+1)':'finish()'}">${i<n-1?'Next':'Finish'}</button></div></main>`}
+function pick(k,k2){const q=PAPERS[paper].q[i],t=typ(q);
+ if(t=='s')ans[i]=k;
+ else if(t=='m'){const a=ans[i]=ans[i]||[],x=a.indexOf(k);
+  if(x>=0)a.splice(x,1);
+  else{if(a.length>=q[2].length){const w=a.findIndex(v=>!q[2].includes(v));if(w<0)return;a.splice(w,1)}a.push(k)}}
+ else{(ans[i]=ans[i]||[])[k]=k2}
+ show()}
+function numIn(el){const q=PAPERS[paper].q[i];ans[i]=el.value;const g=ok(q,el.value);
+ el.className='nv '+(g?'good':'');document.getElementById('mk').textContent=(g?'1':'0')+' of 1 marks'}
+function sub(){const el=document.getElementById('nv');ans[i]=el.value;tried[i]=1;show();const e=document.getElementById('nv');if(e)e.focus()}
+function showResult(){const q=PAPERS[paper].q,s=q.filter((x,k)=>ok(x,ans[k])).length;
+ app.innerHTML=`<main class="res"><div class="logo" style="margin:0 auto 14px;height:48px;width:80px">ACCA</div><p>${PAPERS[paper].t}</p><p><b>Score: ${s} / ${q.length}</b></p><button class="p" onclick="home()">Back to papers</button></main>`}
+function finish(){clearInterval(timer);showResult();push({v:'res'},'#result')}
+addEventListener('popstate',e=>{const st=e.state;
+ if(st&&st.v=='q'&&paper!=null){i=st.i;show()}
+ else if(st&&st.v=='res'&&paper!=null){showResult()}
+ else renderHome()});
+try{history.replaceState({v:'home'},'','#home')}catch(e){}
+renderHome();
+</script></body></html>
